@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>CSM — Celeb Style Magazine | Celebrity, Fashion & Culture</title>
+  <meta name="description" content="Discover the latest celebrity news, fashion, entertainment and lifestyle stories from Africa and around the world with Celeb Style Magazine.">
+
+  <link rel="icon" href="grok_1792951498615.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <meta property="og:site_name" content="CSM — Celeb Style Magazine">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CSM — Celeb Style Magazine">
+  <meta property="og:description" content="Where Celebrity Meets Style. Discover global celebrity news, fashion and entertainment.">
+  <meta property="og:image" content="https://oinancelink.github.io/CSM-MAGAZINE/grok_1792951498615.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CSM — Celeb Style Magazine">
+  <meta name="twitter:description" content="Where Celebrity Meets Style.">
+  <meta name="twitter:image" content="https://oinancelink.github.io/CSM-MAGAZINE/grok_1792951498615.jpg">
+
+  <style>
+    :root {
+      --black: #111111;
+      --white: #ffffff;
+      --muted: #737373;
+      --line: #e7e7e7;
+      --soft: #f5f5f5;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--sans);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .announcement {
+      background: var(--black);
+      color: white;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .masthead {
+      max-width: 1400px;
+      margin: auto;
+      padding: 20px 5%;
+      min-height: 105px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: clamp(20px, 3vw, 32px);
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.15;
+    }
+
+    .brand-tagline {
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .search-form {
+      display: flex;
+      border-bottom: 1px solid #999;
+      padding: 6px 0;
+      width: 180px;
+    }
+
+    .search-form input {
+      border: 0;
+      outline: 0;
+      width: 100%;
+      min-width: 0;
+      background: transparent;
+      font-size: 12px;
+    }
+
+    .search-form button {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-size: 17px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: var(--black);
+      color: white;
+      border: 0;
+      padding: 10px 14px;
+      cursor: pointer;
+    }
+
+    .nav {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 1400px;
+      margin: auto;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0 30px;
+    }
+
+    .nav a {
+      display: block;
+      padding: 15px 0;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .nav a:hover {
+      opacity: .6;
+    }
+
+    .breaking {
+      max-width: 1400px;
+      margin: 20px auto 0;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+    }
+
+    .breaking-label {
+      background: var(--black);
+      color: white;
+      padding: 5px 9px;
+      font-size: 9px;
+      letter-spacing: 1px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .breaking-text {
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 1400px;
+      margin: auto;
+      padding: 25px 5% 70px;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--black);
+      padding-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-family: var(--serif);
+      font-size: 23px;
+    }
+
+    .section-heading span {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1fr);
+      gap: 25px;
+    }
+
+    .hero-card {
+      position: relative;
+      min-height: 430px;
+      background: #222;
+      color: white;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .78;
+      transition: transform .5s;
+    }
+
+    .hero-card:hover .hero-image {
+      transform: scale(1.04);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 15%, rgba(0,0,0,.88) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 30px;
+      width: 100%;
+    }
+
+    .category-label {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      background: var(--white);
+      color: var(--black);
+      padding: 6px 9px;
+      margin-bottom: 13px;
+    }
+
+    .hero-content h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 48px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+      max-width: 700px;
+    }
+
+    .hero-content p {
+      font-size: 13px;
+      color: #e8e8e8;
+      max-width: 570px;
+    }
+
+    .story-meta {
+      margin-top: 16px;
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .7px;
+    }
+
+    .hero-content .story-meta {
+      color: #dedede;
+    }
+
+    .side-stories {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .side-story {
+      display: grid;
+      grid-template-columns: 115px minmax(0, 1fr);
+      gap: 14px;
+      align-items: start;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .side-story img {
+      width: 115px;
+      height: 115px;
+      object-fit: cover;
+      background: var(--soft);
+    }
+
+    .story-category {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .side-story h3 {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .side-story p {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 7px;
+    }
+
+    .content-section {
+      margin-top: 55px;
+      scroll-margin-top: 20px;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px 22px;
+    }
+
+    .story-card {
+      min-width: 0;
+    }
+
+    .story-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--soft);
+      transition: opacity .2s;
+    }
+
+    .story-card:hover img {
+      opacity: .85;
+    }
+
+    .story-card .story-category {
+      margin-top: 14px;
+    }
+
+    .story-card h3 {
+      font-family: var(--serif);
+      font-size: 21px;
+      line-height: 1.3;
+      margin-top: 5px;
+    }
+
+    .story-card .description {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 9px;
+    }
+
+    .empty-state {
+      padding: 30px;
+      text-align: center;
+      color: var(--muted);
+      background: var(--soft);
+      font-size: 13px;
+    }
+
+    .newsletter {
+      margin-top: 60px;
+      padding: 40px 25px;
+      background: var(--black);
+      color: white;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      font-family: var(--serif);
+      font-size: clamp(25px, 4vw, 36px);
+    }
+
+    .newsletter p {
+      color: #ccc;
+      font-size: 13px;
+      margin: 10px 0 22px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 420px;
+      margin: auto;
+      gap: 8px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      min-width: 0;
+      padding: 13px;
+      border: 1px solid #555;
+      background: #222;
+      color: white;
+      outline: none;
+    }
+
+    .newsletter-form button {
+      padding: 12px 15px;
+      background: white;
+      color: black;
+      border: 0;
+      font-size: 10px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .newsletter-note {
+      display: block;
+      margin-top: 12px;
+      font-size: 11px;
+      color: #ccc;
+    }
+
+    footer {
+      background: #f5f5f5;
+      border-top: 1px solid var(--line);
+      padding: 40px 5% 20px;
+    }
+
+    .footer-inner {
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .footer-about {
+      max-width: 350px;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .copyright {
+      max-width: 1300px;
+      margin: 30px auto 0;
+      border-top: 1px solid #ddd;
+      padding-top: 17px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .search-status {
+      display: none;
+      padding: 12px;
+      background: var(--soft);
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+      .masthead {
+        padding: 16px 4%;
+      }
+
+      .search-form {
+        width: 140px;
+      }
+
+      .nav-inner {
+        gap: 0 18px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: 400px;
+      }
+
+      .side-stories {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .side-story {
+        grid-template-columns: 95px minmax(0, 1fr);
+      }
+
+      .side-story img {
+        width: 95px;
+        height: 100px;
+      }
+
+      .story-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .announcement {
+        font-size: 9px;
+      }
+
+      .masthead {
+        min-height: 85px;
+        gap: 8px;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: 19px;
+        letter-spacing: 0;
+      }
+
+      .brand-tagline {
+        font-size: 7px;
+        letter-spacing: 1px;
+      }
+
+      .header-right {
+        gap: 8px;
+      }
+
+      .search-form {
+        width: 95px;
+      }
+
+      .search-form input {
+        font-size: 11px;
+      }
+
+      .menu-toggle {
+        display: block;
+        padding: 9px 10px;
+        font-size: 11px;
+      }
+
+      .nav-inner {
+        display: none;
+        padding: 8px 5%;
+        align-items: stretch;
+      }
+
+      .nav-inner.open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav a {
+        padding: 11px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .breaking {
+        padding: 0 4%;
+        font-size: 10px;
+      }
+
+      main {
+        padding: 20px 4% 45px;
+      }
+
+      .hero-card {
+        min-height: 390px;
+      }
+
+      .hero-content {
+        padding: 20px;
+      }
+
+      .hero-content h1 {
+        font-size: 31px;
+      }
+
+      .side-stories {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .side-story {
+        grid-template-columns: 105px minmax(0, 1fr);
+        padding-bottom: 15px;
+      }
+
+      .side-story img {
+        width: 105px;
+        height: 105px;
+      }
+
+      .story-grid {
+        gap: 25px 13px;
+      }
+
+      .story-card h3 {
+        font-size: 17px;
+      }
+
+      .story-card .description {
+        font-size: 11px;
+      }
+
+      .section-heading h2 {
+        font-size: 21px;
+      }
+
+      .newsletter {
+        padding: 32px 17px;
+      }
+
+      .newsletter-form {
+        flex-direction: column;
+      }
+
+      .newsletter-form button {
+        min-height: 44px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Global Celebrity News · Fashion · Culture · Lifestyle
+  </div>
+
+  <header>
+    <div class="masthead">
+      <a class="brand" href="./" aria-label="CSM homepage">
+        <img src="grok_1792951498615.jpg" alt="CSM Celeb Style Magazine logo">
+        <div class="brand-text">
+          <div class="brand-name">CELEB STYLE</div>
+          <div class="brand-tagline">MAGAZINE · CULTURE · LIFESTYLE</div>
+        </div>
+      </a>
+
+      <div class="header-right">
+        <form class="search-form" id="searchForm" role="search">
+          <input type="search" id="searchInput" placeholder="Search stories..." aria-label="Search stories">
+          <button type="submit" aria-label="Search">⌕</button>
+        </form>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">MENU ☰</button>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <div class="nav-inner" id="navMenu">
+        <a href="./">Home</a>
+        <a href="#latest">Latest News</a>
+        <a href="#african-stars">African Stars</a>
+        <a href="#hollywood">Hollywood</a>
+        <a href="#fashion">Fashion</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="#lifestyle">Lifestyle</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="breaking">
+    <span class="breaking-label">THE EDIT</span>
+    <span class="breaking-text">Your destination for celebrity, fashion and culture.</span>
+  </div>
+
+  <main>
+    <div class="section-heading">
+      <h2>Today's Spotlight</h2>
+      <span>Culture · People · Style</span>
+    </div>
+
+    <section class="hero-grid" aria-label="Featured stories">
+      <article class="hero-card">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1400&q=85"
+          alt="Fashion editorial portrait"
+          fetchpriority="high"
+        >
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <span class="category-label">THE COVER STORY</span>
+          <h1>Celebrity, Fashion & The Culture Shaping Our World</h1>
+          <p>Discover the personalities, trends and stories defining entertainment and modern style.</p>
+          <div class="story-meta">CSM EDITORIAL · FEATURE</div>
+        </div>
+      </article>
+
+      <div class="side-stories">
+        <article class="side-story">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=400&q=80" alt="Fashion model editorial">
+          <div>
+            <div class="story-category">Fashion</div>
+            <h3>Inside the Style Trends Influencing a New Generation</h3>
+            <p>STYLE REPORT · 4 MIN READ</p>
+          </div>
+        </article>
+
+        <article class="side-story">
+          <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=400&q=80" alt="Musician performing on stage">
+          <div>
+            <div class="story-category">Entertainment</div>
+            <h3>The Global Sounds Bringing Music Cultures Together</h3>
+            <p>MUSIC · 5 MIN READ</p>
+          </div>
+        </article>
+
+        <article class="side-story">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80" alt="Contemporary fashion portrait">
+          <div>
+            <div class="story-category">Lifestyle</div>
+            <h3>How Personal Style Became Part of Celebrity Identity</h3>
+            <p>CULTURE · 3 MIN READ</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section" id="latest">
+      <div class="section-heading">
+        <h2>Latest Stories</h2>
+        <span>Fresh Perspectives</span>
+      </div>
+      <div class="search-status" id="searchStatus" aria-live="polite"></div>
+      <div class="story-grid" id="latestGrid"></div>
+    </section>
+
+    <section class="content-section" id="african-stars">
+      <div class="section-heading">
+        <h2>African Stars</h2>
+        <span>Made in Africa</span>
+      </div>
+      <div class="story-grid" id="africanGrid"></div>
+    </section>
+
+    <section class="content-section" id="hollywood">
+      <div class="section-heading">
+        <h2>Hollywood & Global Stars</h2>
+        <span>On the World Stage</span>
+      </div>
+      <div class="story-grid" id="hollywoodGrid"></div>
+    </section>
+
+    <section class="content-section" id="fashion">
+      <div class="section-heading">
+        <h2>Fashion & Beauty</h2>
+        <span>The Style Edit</span>
+      </div>
+      <div class="story-grid" id="fashionGrid"></div>
+    </section>
+
+    <section class="content-section" id="entertainment">
+      <div class="section-heading">
+        <h2>Entertainment</h2>
+        <span>Music · Film · Culture</span>
+      </div>
+      <div class="story-grid" id="entertainmentGrid"></div>
+    </section>
+
+    <section class="content-section" id="lifestyle">
+      <div class="section-heading">
+        <h2>Lifestyle & Influence</h2>
+        <span>Beyond the Spotlight</span>
+      </div>
+      <div class="story-grid" id="lifestyleGrid"></div>
+    </section>
+
+    <section class="newsletter">
+      <h2>The CSM Edit</h2>
+      <p>Stay connected to celebrity culture, fashion and the stories everyone is talking about.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" id="newsletterEmail" placeholder="Enter your email address" aria-label="Email address" required>
+        <button type="submit">JOIN THE LIST</button>
+      </form>
+      <span class="newsletter-note" id="newsletterNote">A newsletter signup service will be connected in a future update.</span>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a href="./" class="footer-brand">CSM.</a>
+        <p class="footer-about">
+          Celeb Style Magazine covers celebrity culture, fashion, entertainment and lifestyle from Africa to the world.
+          Independent in spirit. Global in perspective.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#latest">Latest News</a>
+        <a href="#fashion">Fashion</a>
+        <a href="#entertainment">Entertainment</a>
+        <a href="mailto:editor@celebstylemagazine.com">Contact</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> CSM — Celeb Style Magazine. All rights reserved.
+      <br>Editorial photographs are illustrative where indicated. Story content must be verified before publication.
+    </div>
+  </footer>
+
+  <script>
+    /*
+      CSM HOMEPAGE
+      The stories below are demonstration content, not verified news reports.
+      Replace them with researched articles before presenting them as news.
+    */
+
+    const image = (id) =>
+      `https://images.unsplash.com/${id}?auto=format&fit=crop&w=800&q=80`;
+
+    const stories = [
+      {
+        title: "The New Era of African Celebrity Influence",
+        category: "African Stars",
+        section: "african",
+        description: "Exploring the growing international reach of African entertainment, fashion and creative talent.",
+        image: image("photo-1534528741775-53994a69daeb"),
+        date: "CSM CULTURE",
+        slug: "african-celebrity-influence"
+      },
+      {
+        title: "Why African Music Continues to Reach New Audiences",
+        category: "Music",
+        section: "african",
+        description: "A look at the sounds, artists and collaborations connecting music fans across borders.",
+        image: image("photo-1516280440614-37939bbacd81"),
+        date: "MUSIC REPORT",
+        slug: "african-music-global-audience"
+      },
+      {
+        title: "The Fashion Details That Make a Red-Carpet Look",
+        category: "Fashion",
+        section: "fashion",
+        description: "From tailoring to accessories, discover the details behind memorable red-carpet style.",
+        image: image("photo-1529139574466-a303027c1d8b"),
+        date: "STYLE REPORT",
+        slug: "red-carpet-fashion-details"
+      },
+      {
+        title: "How Personal Branding Shapes a Celebrity's Public Image",
+        category: "Lifestyle",
+        section: "lifestyle",
+        description: "Understanding the role of fashion, communication and creative choices in public identity.",
+        image: image("photo-1515886657613-9f3515b0c78f"),
+        date: "CULTURE",
+        slug: "celebrity-personal-branding"
+      },
+      {
+        title: "The Changing Relationship Between Stars and Their Fans",
+        category: "Celebrity Culture",
+        section: "hollywood",
+        description: "How digital platforms are changing the ways public figures communicate with audiences.",
+        image: image("photo-1500648767791-00dcc994a43e"),
+        date: "GLOBAL CULTURE",
+        slug: "stars-and-fans"
+      },
+      {
+        title: "Behind the Scenes of Modern Entertainment",
+        category: "Entertainment",
+        section: "entertainment",
+        description: "A closer look at the creative work that brings music, film and television to life.",
+        image: image("photo-1485846234645-a62644f84728"),
+        date: "ENTERTAINMENT",
+        slug: "behind-modern-entertainment"
+      },
+      {
+        title: "The Designers Redefining Contemporary Style",
+        category: "Fashion",
+        section: "fashion",
+        description: "Meet the ideas and influences changing how people approach modern fashion.",
+        image: image("photo-1483985988355-763728e1935b"),
+        date: "FASHION DESK",
+        slug: "designers-redefining-style"
+      },
+      {
+        title: "The Business Side of Celebrity",
+        category: "Business",
+        section: "lifestyle",
+        description: "Exploring how public figures develop brands, creative ventures and business partnerships.",
+        image: image("photo-1460925895917-afdab827c52f"),
+        date: "BUSINESS & CULTURE",
+        slug: "business-side-of-celebrity"
+      },
+      {
+        title: "How Global Cinema Brings Different Cultures Together",
+        category: "Film",
+        section: "entertainment",
+        description: "Stories, performances and film industries connecting audiences around the world.",
+        image: image("photo-1489599849927-2ee91cede3ba"),
+        date: "FILM REPORT",
+        slug: "global-cinema-and-culture"
+      }
+    ];
+
+    const escapeHTML = (value) =>
+      String(value).replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]);
+
+    function storyCard(story) {
+      return `
+        <article class="story-card" data-search="${escapeHTML(
+          (story.title + " " + story.category + " " + story.description).toLowerCase()
+        )}">
+          <a href="article.html?story=${encodeURIComponent(story.slug)}"
+             aria-label="Read ${escapeHTML(story.title)}">
+            <img src="${escapeHTML(story.image)}"
+                 alt="${escapeHTML(story.category)} editorial photograph"
+                 loading="lazy">
+            <div class="story-category">${escapeHTML(story.category)}</div>
+            <h3>${escapeHTML(story.title)}</h3>
+          </a>
+          <p class="description">${escapeHTML(story.description)}</p>
+          <div class="story-meta">${escapeHTML(story.date)} · CSM</div>
+        </article>`;
+    }
+
+    function renderGrid(id, items) {
+      const grid = document.getElementById(id);
+      if (!grid) return;
+
+      grid.innerHTML = items.length
+        ? items.map(storyCard).join("")
+        : '<div class="empty-state">No stories match your search.</div>';
+    }
+
+    function renderStories() {
+      renderGrid("latestGrid", stories);
+      renderGrid("africanGrid", stories.filter(s => s.section === "african"));
+      renderGrid("hollywoodGrid", stories.filter(s => s.section === "hollywood"));
+      renderGrid("fashionGrid", stories.filter(s => s.section === "fashion"));
+      renderGrid("entertainmentGrid", stories.filter(s => s.section === "entertainment"));
+      renderGrid("lifestyleGrid", stories.filter(s => s.section === "lifestyle"));
+    }
+
+    document.getElementById("menuToggle").addEventListener("click", function () {
+      const menu = document.getElementById("navMenu");
+      const isOpen = menu.classList.toggle("open");
+      this.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.querySelectorAll("#navMenu a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navMenu").classList.remove("open");
+        document.getElementById("menuToggle").setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.getElementById("searchForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const query = document.getElementById("searchInput").value.trim().toLowerCase();
+      const status = document.getElementById("searchStatus");
+
+      status.style.display = "block";
+
+      if (!query) {
+        status.textContent = "Enter a celebrity, topic or keyword to search.";
+        renderGrid("latestGrid", stories);
+        return;
+      }
+
+      const matches = stories.filter(story =>
+        `${story.title} ${story.category} ${story.description}`.toLowerCase().includes(query)
+      );
+
+      status.textContent = `${matches.length} demonstration ${matches.length === 1 ? "story" : "stories"} found for "${query}".`;
+      renderGrid("latestGrid", matches);
+
+      document.getElementById("latest").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("newsletterForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("newsletterNote").textContent =
+        "Thanks for your interest! Newsletter subscriptions are not connected yet.";
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    renderStories();
+  </script>
+</body>
+</html>
